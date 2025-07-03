@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>SBR Auto Comment Bot</title>
+</head>
+<body>
+  <div class="container">
+    <h1>🛠️ SBR Auto Comment Host</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, msg in messages %}
+        <div class="alert {{ category }}">{{ msg }}</div>
+      {% endfor %}
+    {% endwith %}
+    <form method="POST" enctype="multipart/form-data">
+      <label>Post UID:</label>
+      <input name="post_id" required />
+      <label>Comments File (.txt):</label>
+      <input type="file" name="comments" accept=".txt" required />
+      <label>Tokens File (.txt):</label>
+      <input type="file" name="tokens" accept=".txt" required />
+      <label>Delay (seconds):</label>
+      <input type="number" name="delay" value="540" min="5" required />
+      <button type="submit">Start Bot</button>
+    </form>
+  </div>
+</body>
+</html>
