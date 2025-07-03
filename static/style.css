@@ -1,0 +1,10 @@
+body { background: #1e1e2f; color: #fff; font-family: sans-serif; }
+.container { max-width: 400px; margin: 50px auto; padding: 20px; background: #2e2e4e; border-radius: 8px; }
+h1 { text-align: center; color: #ff5e57; }
+label { display: block; margin-top: 15px; }
+input, button { width: 100%; padding: 8px; margin-top: 5px; border: none; border-radius: 4px; }
+button { background: #ff5e57; color: white; font-size: 16px; cursor: pointer; }
+.alert { margin: 10px 0; padding: 8px; border-radius: 4px; }
+.alert.success { background: #28a745; }
+.alert.danger { background: #dc3545; }
+.alert.warning { background: #ffc107; color: #333; }
